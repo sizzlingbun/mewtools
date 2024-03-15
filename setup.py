@@ -11,7 +11,7 @@ from setuptools import find_packages, setup, Command
 # Package meta-data.
 NAME = "mewtools"
 DESCRIPTION = "My python library package with some scraper tool and data tool"
-URL = "https://github.com/pgshow/mylibtool"
+URL = "https://github.com/sizzlingbun/mewtools"
 EMAIL = "me@example.com"
 AUTHOR = "Daniel"
 REQUIRES_PYTHON = ">=3.10.0"
@@ -20,7 +20,6 @@ VERSION = "0.1.1"
 # What packages are required for this module to be executed?
 REQUIRED = [
     "addict==2.4.0",
-    "backports.zoneinfo==0.2.1",
     "carehttp>=0.3.11",
     "certifi==2022.5.18.1",
     "charset-normalizer==2.0.12",
