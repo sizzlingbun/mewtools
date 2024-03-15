@@ -13,7 +13,7 @@ NAME = "mewtools"
 DESCRIPTION = "My python library package with some scraper tool and data tool"
 URL = "https://github.com/sizzlingbun/mewtools"
 EMAIL = "me@example.com"
-AUTHOR = "Daniel"
+AUTHOR = "Andrew"
 REQUIRES_PYTHON = ">=3.10.0"
 VERSION = "0.1.1"
 
