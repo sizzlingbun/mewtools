@@ -15,7 +15,7 @@ URL = "https://github.com/sizzlingbun/mewtools"
 EMAIL = "me@example.com"
 AUTHOR = "Andrew"
 REQUIRES_PYTHON = ">=3.10.0"
-VERSION = "0.1.1"
+VERSION = "0.1.3"
 
 # What packages are required for this module to be executed?
 REQUIRED = [
@@ -42,7 +42,7 @@ REQUIRED = [
     "retrying==1.3.3",
     "six==1.16.0",
     "snaptime==0.2.4",
-    "tzdata==2022.1",
+    "tzdata",
     "tzlocal==4.2",
     "urllib3>=1.25.11",
     "win32-setctime==1.1.0",
