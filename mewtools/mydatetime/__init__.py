@@ -1,7 +1,7 @@
 import re
 import arrow
 from loguru import logger
-from mylibtool.mydatetime import core
+from mewtools.mydatetime import core
 
 
 # def get_datetime(text, custom_timezones=None, day_first=False):
@@ -39,7 +39,7 @@ def extract_datetime(text, day_first=False):
     :param day_first:
     :return: datetime without tzinfo
     """
-    return core.extract(text, day_first=day_first, method='datetime')
+    return core.extract(text, day_first=day_first, method="datetime")
 
 
 def extract_date(text, date_only=False, day_first=False):
@@ -50,7 +50,7 @@ def extract_date(text, date_only=False, day_first=False):
     :param day_first:
     :return: datetime without time and tzinfo
     """
-    datetime_tmp = core.extract(text, day_first=day_first, method='date')
+    datetime_tmp = core.extract(text, day_first=day_first, method="date")
 
     if date_only:
         date = datetime_tmp.date()
@@ -59,7 +59,7 @@ def extract_date(text, date_only=False, day_first=False):
         return datetime_tmp.replace(hour=0, minute=0, second=0)
 
 
-def convert_timezone(old_datetime, city_name_or_timezone='local'):
+def convert_timezone(old_datetime, city_name_or_timezone="local"):
     """
     Convert a datetime to another timezone
     :param old_datetime:
@@ -69,16 +69,18 @@ def convert_timezone(old_datetime, city_name_or_timezone='local'):
     try:
         if old_datetime.year < 1970:
             # 1970年之前的时间，arrow库不支持
-            logger.warning(f'Mylibtool can not convert timezone for {old_datetime}, because it is before 1970')
+            logger.warning(
+                f"mewtools can not convert timezone for {old_datetime}, because it is before 1970"
+            )
             return old_datetime
 
         new_datetime = arrow.get(old_datetime).to(city_name_or_timezone)
         return new_datetime.datetime
     except:
-        raise Exception(f'datetime {old_datetime} might miss tzinfo')
+        raise Exception(f"datetime {old_datetime} might miss tzinfo")
 
 
-def to_datetime_str(datetime_obj, format_rule='YYYY-MM-DD HH:mm:ss'):
+def to_datetime_str(datetime_obj, format_rule="YYYY-MM-DD HH:mm:ss"):
     """
     Convert a datetime to string
     :param datetime_obj:

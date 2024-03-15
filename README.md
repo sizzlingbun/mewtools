@@ -1,13 +1,11 @@
-📦 Mylibtool
-=======================
+# 📦 Mewtools
 
-Mylibtool include DataTime extraction module and WordPress module.
+mewtools include DataTime extraction module and WordPress module.
 
 The demo is in example folder.
 
-Installation
------
+## Installation
 
 ```bash
-pip3 install mylibtool
+pip3 install mewtools
 ```

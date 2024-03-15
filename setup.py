@@ -15,7 +15,7 @@ URL = "https://github.com/sizzlingbun/mewtools"
 EMAIL = "me@example.com"
 AUTHOR = "Andrew"
 REQUIRES_PYTHON = ">=3.10.0"
-VERSION = "0.1.3"
+VERSION = "0.1.4"
 
 # What packages are required for this module to be executed?
 REQUIRED = [
@@ -129,7 +129,7 @@ setup(
     url=URL,
     packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
     # If your package is a single module, use this instead of 'packages':
-    py_modules=["mylibtool"],
+    py_modules=["mewtools"],
     # entry_points={
     #     'console_scripts': ['mycli=mymodule:cli'],
     # },
